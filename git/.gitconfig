@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgei7PmzwG1nbznFQxARBmx+OjnxXvb4oOauv07yczr
+	email = otto.reimers@gmail.com
+	name = Otto Reimers
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+# Please adapt and uncomment the following lines:
+    name = Otto Reimers
+	email = otto.reimers@frojd.se
