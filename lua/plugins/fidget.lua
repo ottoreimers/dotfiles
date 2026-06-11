@@ -1,6 +1,3 @@
-return {
-	"j-hui/fidget.nvim",
-	opts = {
-		-- options
-	},
-}
+require("fidget").setup({
+	-- options
+})
