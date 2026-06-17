@@ -14,7 +14,7 @@ brew bundle --file=Brewfile
 # tmux and karabiner keep real dirs (runtime state lives next to config),
 # so stow links their files individually instead of the whole dir.
 mkdir -p "$HOME/.config/tmux" "$HOME/.config/karabiner"
-stow --target="$HOME" --restow nvim zsh git tmux starship ghostty kitty karabiner sketchybar
+stow --target="$HOME" --restow nvim zsh git tmux starship ghostty kitty karabiner sketchybar claude
 
 # tmux plugin manager (plugins are not tracked; tpm installs them with prefix+I)
 if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then

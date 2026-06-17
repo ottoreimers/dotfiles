@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_playwright_playwright"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); cwd=$(echo \"$input\" | jq -r '.workspace.current_dir'); cd \"$cwd\" 2>/dev/null || cd \"$HOME\"; dir_name=$(basename \"$cwd\"); parent_dir=$(basename \"$(dirname \"$cwd\")\"); if [ \"$cwd\" = \"$HOME\" ]; then dir_display=\"~\"; elif [ \"$parent_dir\" = \"$(basename \"$HOME\")\" ]; then dir_display=\"~/$dir_name\"; else dir_display=\"$parent_dir/$dir_name\"; fi; if git rev-parse --git-dir > /dev/null 2>&1; then branch=$(git -c core.useBuiltinFSMonitor=false branch --show-current 2>/dev/null || git rev-parse --short HEAD 2>/dev/null); if [ -n \"$(git -c core.useBuiltinFSMonitor=false status --porcelain 2>/dev/null)\" ]; then git_status=\" *\"; else git_status=\"\"; fi; if [ -n \"$branch\" ]; then git_info=\" on  $branch$git_status\"; else git_info=\"\"; fi; else git_info=\"\"; fi; printf \"%s%s\" \"$dir_display\" \"$git_info\""
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
+  },
+  "alwaysThinkingEnabled": false,
+  "effortLevel": "xhigh"
+}
