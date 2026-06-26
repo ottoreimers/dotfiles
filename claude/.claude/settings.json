@@ -16,5 +16,6 @@
     "playwright@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": false,
-  "effortLevel": "xhigh"
+  "effortLevel": "xhigh",
+  "tui": "fullscreen"
 }
