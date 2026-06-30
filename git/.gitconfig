@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgei7PmzwG1nbznFQxARBmx+OjnxXvb4oOauv07yczr
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG5wvwIg8muaYtrJuehFYWqA3IIjRWLoeXRT55akvEVE
 	email = otto.reimers@gmail.com
 	name = Otto Reimers
 

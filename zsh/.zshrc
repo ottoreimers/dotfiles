@@ -116,7 +116,6 @@ export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 
 
-source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -132,3 +131,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export DOTNET_ROOT=/opt/homebrew/Cellar/dotnet@9/9.0.115/libexec
 export PATH=$DOTNET_ROOT:$PATH
 
+source /Users/ottoreimers/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script

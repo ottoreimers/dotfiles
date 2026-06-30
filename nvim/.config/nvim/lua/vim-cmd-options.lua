@@ -13,3 +13,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = false
 vim.opt.wrap = false
+
+-- Paste and auto-reindent the pasted text to match surrounding code
+vim.keymap.set("n", "p", "p`[v`]=")
+vim.keymap.set("n", "P", "P`[v`]=")
