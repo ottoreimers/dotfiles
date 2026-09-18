@@ -48,7 +48,10 @@ vim.pack.add({
 	"https://github.com/folke/trouble.nvim",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/folke/sidekick.nvim",
-    "https://github.com/nyoom-engineering/oxocarbon.nvim",
+	{
+		src = "https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+	},
 })
 
 -- Plugin setup. blink must come before lsp-config (capabilities).
@@ -70,4 +73,5 @@ require("plugins.snacks")
 require("plugins.trouble")
 require("plugins.which-key")
 require("plugins.sidekick")
-require("oxocarbon")
+require("rose-pine").setup()
+vim.cmd("colorscheme rose-pine")
