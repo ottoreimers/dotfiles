@@ -3,15 +3,15 @@ vim.wo.relativenumber = true
 require("vim-cmd-options")
 
 -- Rebuild treesitter parsers when the plugin itself is updated
-vim.api.nvim_create_autocmd("PackChanged", {
-	callback = function(ev)
-		if ev.data.spec.name == "nvim-treesitter" and ev.data.kind == "update" then
-			vim.schedule(function()
-				vim.cmd("TSUpdate")
-			end)
-		end
-	end,
-})
+-- vim.api.nvim_create_autocmd("PackChanged", {
+-- 	callback = function(ev)
+-- 		if ev.data.spec.name == "nvim-treesitter" and ev.data.kind == "update" then
+-- 			vim.schedule(function()
+-- 				vim.cmd("TSUpdate")
+-- 			end)
+-- 		end
+-- 	end,
+-- })
 
 vim.pack.add({
 	-- libs
@@ -23,16 +23,14 @@ vim.pack.add({
 	-- completion
 	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/saghen/blink.lib",
-	"https://github.com/giuxtaposition/blink-cmp-copilot",
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
-	"https://github.com/zbirenbaum/copilot.lua",
 	-- lsp
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/mason-org/mason-lspconfig.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/j-hui/fidget.nvim",
 	-- treesitter
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+	-- { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 	"https://github.com/Wansmer/treesj",
 	-- editing
 	"https://github.com/stevearc/conform.nvim",
@@ -50,13 +48,13 @@ vim.pack.add({
 	"https://github.com/folke/trouble.nvim",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/folke/sidekick.nvim",
+    "https://github.com/nyoom-engineering/oxocarbon.nvim",
 })
 
 -- Plugin setup. blink must come before lsp-config (capabilities).
 require("plugins.mini-icons")
 require("plugins.nvim-webdev-icons")
 require("plugins.blink")
-require("plugins.copilot")
 require("plugins.lsp-config")
 require("plugins.fidget")
 require("plugins.treesitter")
@@ -72,3 +70,4 @@ require("plugins.snacks")
 require("plugins.trouble")
 require("plugins.which-key")
 require("plugins.sidekick")
+require("oxocarbon")

@@ -114,7 +114,7 @@ export LANG="en_US.UTF-8"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
-
+export NODE_EXTRA_CA_CERTS="$HOME/.certs/cloudflare-gateway-ca.pem"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -132,3 +132,8 @@ export DOTNET_ROOT=/opt/homebrew/Cellar/dotnet@9/9.0.115/libexec
 export PATH=$DOTNET_ROOT:$PATH
 
 source /Users/ottoreimers/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ottoreimers/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
